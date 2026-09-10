@@ -24,7 +24,7 @@ round_and_suppress <- function(data, multiple = 5, suppression_value = -1){
   data %>%
     dplyr::mutate(
       dplyr::across(
-        tidyselect::contains("Percentage"),
+        tidyselect::contains("Percent"),
         ~ {janitor::round_half_up(., 2)
           }
         )
@@ -32,7 +32,7 @@ round_and_suppress <- function(data, multiple = 5, suppression_value = -1){
     dplyr::mutate(
       dplyr::across(
         tidyselect::where(is.numeric) &
-          !tidyselect::contains("Percentage") &
+          !tidyselect::contains("Percent") &
           !tidyselect::contains("Median"),
         ~ {dplyr::case_when(
           . < 1 ~ janitor::round_half_up(., 2),
