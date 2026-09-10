@@ -1,5 +1,7 @@
 # sssstats 0.3.5
 
+-   Improve `round_and_suppress()` identification of 'percentage' columns (#46)
+
 # sssstats 0.3.4
 
 -   Functions `get_simd_lookup` and `get_datazone_lookup` updated to use the new data.gov.scot platform.
