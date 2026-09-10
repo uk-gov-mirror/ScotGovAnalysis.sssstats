@@ -40,14 +40,14 @@ get_simd_lookup <- function() {
       values_from = "value"
     ) |>
     janitor::clean_names(case = "snake") |>
-    dplyr::mutate(ref_area = geography_code)|>
+    dplyr::mutate(ref_area = .data$geography_code)|>
     dplyr::select(
-      geography_code,
-      simd_2020_rank,
-      simd_2020_quintile,
-      simd_2020_decile,
-      simd_2020_vigintile,
-      ref_area
+      .data$geography_code,
+      .data$simd_2020_rank,
+      .data$simd_2020_quintile,
+      .data$simd_2020_decile,
+      .data$simd_2020_vigintile,
+      .data$ref_area
     ) |>
-    dplyr::distinct(geography_code, .keep_all = TRUE)
+    dplyr::distinct(.data$geography_code, .keep_all = TRUE)
 }
