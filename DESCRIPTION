@@ -9,10 +9,8 @@ Imports:
     bizdays,
     dplyr,
     glue,
-    httr,
     httr2,
     janitor,
-    jsonlite,
     lubridate,
     magrittr,
     openxlsx,
@@ -22,14 +20,14 @@ Imports:
     rlang,
     stats,
     stringr,
-    tibble,
     tidyr,
     tidyselect,
     utils
 Suggests: 
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    tibble
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
